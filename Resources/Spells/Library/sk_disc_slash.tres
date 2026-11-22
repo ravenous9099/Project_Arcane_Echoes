@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+[ext_resource type="Script" path="res://Resources/SkillStep.gd" id="2_step"]
+
+[sub_resource type="Resource" id="step_1"]
+script = ExtResource("2_step")
+type = 0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/b02"
+anchor = 1
+offset = 30.0
+vfx_scale = 3.0
+vfx_fps = 14.0
+rotate_to_dir = true
+vfx_rotation_offset_deg = 180.0
+
+[sub_resource type="Resource" id="step_2"]
+script = ExtResource("2_step")
+type = 0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/c10"
+vfx_scale = 2.0
+vfx_fps = 16.0
+
+[sub_resource type="Resource" id="step_3"]
+script = ExtResource("2_step")
+type = 2
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/c14"
+delay = 0.05
+anchor = 1
+offset = 26.0
+vfx_scale = 2.0
+vfx_fps = 16.0
+rotate_to_dir = true
+count = 3
+spread_deg = 36.0
+speed = 440.0
+max_range = 240.0
+contact_radius = 14.0
+pierce = 2
+damage = 22.0
+damage_type = 2
+knockback_force = 120.0
+on_end = Array[ExtResource("2_step")]([SubResource("step_2")])
+
+[resource]
+script = ExtResource("1_spell")
+id = &"sk_disc_slash"
+display_name = "Disc Slash"
+description = "Chém một đường cung băng, tung 3 đĩa băng xoáy xuyên qua tối đa 3 kẻ địch (22 sát thương mỗi lần chạm) rồi vỡ vụn."
+color = Color(0.35, 0.6, 1.0, 1)
+cooldown = 5.0
+damage = 22.0
+kind = 4
+cast_time = 0.15
+recovery_time = 0.25
+damage_type = 2
+steps = Array[ExtResource("2_step")]([SubResource("step_1"), SubResource("step_3")])
+charge_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/c10"
+charge_vfx_scale = 2.0
+charge_offset = 14.0
+icon_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/c14"
+icon_frame = 0

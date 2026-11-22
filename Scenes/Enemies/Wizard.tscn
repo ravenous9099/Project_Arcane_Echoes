@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ysnv37dj7s3p"]
+
+[ext_resource type="Script" uid="uid://dm34hebw07nbs" path="res://Scripts/Systems/Enemy.gd" id="1_pjivp"]
+[ext_resource type="Resource" path="res://Resources/EnemyAttacks/magic_orb.tres" id="9_atk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3pn3a"]
+
+[node name="Wizard" type="CharacterBody2D" unique_id=1239374548]
+script = ExtResource("1_pjivp")
+character_folder = "res://Assets/Characters/2D HD Character pack/Spritesheets/With shadow/3Wizard"
+archetype = 2
+max_health = 36.0
+move_speed = 60.0
+attack_range = 340.0
+keep_distance_min = 220.0
+attack_cooldown = 2.2
+telegraph_time = 0.7
+aim_lock_time = 0.25
+attack_active_time = 0.1
+recovery_time = 0.5
+attack_animation = "CastSpell"
+attack_spell = ExtResource("9_atk")
+enemy_name = "Phù thủy"
+score_value = 20
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1764712106]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=699223773]
+shape = SubResource("CircleShape2D_3pn3a")

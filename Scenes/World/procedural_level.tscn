@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cjfbcfp4j1fly"]
+
+[ext_resource type="Script" uid="uid://nqdtjlir2o5s" path="res://Scripts/Systems/MapGenerator.gd" id="1_sgmt3"]
+
+[node name="ProceduralLevel" type="Node2D" unique_id=151713338]
+script = ExtResource("1_sgmt3")

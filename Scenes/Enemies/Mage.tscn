@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://6yri4qs35kw2"]
+
+[ext_resource type="Script" uid="uid://dm34hebw07nbs" path="res://Scripts/Systems/Enemy.gd" id="1_18anq"]
+[ext_resource type="Resource" path="res://Resources/EnemyAttacks/arcane_blast.tres" id="9_atk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xe7no"]
+
+[node name="Mage" type="CharacterBody2D" unique_id=1852587917]
+script = ExtResource("1_18anq")
+character_folder = "res://Assets/Characters/2D HD Character pack/Spritesheets/With shadow/7DeathKnight"
+attack_animation = "CastSpell"
+sprite_scale = Vector2(1, 1)
+enemy_name = "Pháp sư bóng tối"
+score_value = 20
+max_health = 34.0
+move_speed = 55.0
+archetype = 2
+attack_spell = ExtResource("9_atk")
+attack_range = 320.0
+keep_distance_min = 200.0
+attack_cooldown = 2.6
+telegraph_time = 0.9
+aim_lock_time = 0.5
+recovery_time = 0.6
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1675082221]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1842570989]
+shape = SubResource("CircleShape2D_xe7no")

@@ -1,0 +1,114 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+[ext_resource type="Script" path="res://Resources/SkillStep.gd" id="2_step"]
+
+[sub_resource type="Resource" id="step_1"]
+script = ExtResource("2_step")
+type = 0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/e07"
+anchor = 2
+max_range = 320.0
+vfx_scale = 4.5
+vfx_fps = 6.0
+duration = 0.6
+
+[sub_resource type="Resource" id="step_2"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/c09"
+delay = 0.6
+anchor = 2
+max_range = 320.0
+vfx_scale = 4.0
+vfx_fps = 14.0
+radius = 80.0
+damage = 55.0
+damage_type = 1
+knockback_force = 220.0
+
+[sub_resource type="Resource" id="step_3"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/e12"
+delay = 0.6
+anchor = 2
+max_range = 320.0
+vfx_scale = 4.5
+vfx_fps = 12.0
+
+[sub_resource type="Resource" id="step_4"]
+script = ExtResource("2_step")
+type = 3
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/d12"
+delay = 0.7
+anchor = 2
+max_range = 320.0
+vfx_scale = 2.2
+vfx_fps = 10.0
+duration = 3.0
+radius = 56.0
+damage = 10.0
+damage_type = 1
+tick_interval = 1.0
+
+[sub_resource type="Resource" id="step_5"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/c15"
+delay = 0.85
+anchor = 2
+max_range = 320.0
+pos_offset = Vector2(-76.0, -30.0)
+vfx_scale = 2.4
+vfx_fps = 14.0
+radius = 48.0
+damage = 25.0
+damage_type = 1
+
+[sub_resource type="Resource" id="step_6"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/c15"
+delay = 1.0
+anchor = 2
+max_range = 320.0
+pos_offset = Vector2(74.0, -26.0)
+vfx_scale = 2.4
+vfx_fps = 14.0
+radius = 48.0
+damage = 25.0
+damage_type = 1
+
+[sub_resource type="Resource" id="step_7"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/c15"
+delay = 1.15
+anchor = 2
+max_range = 320.0
+pos_offset = Vector2(4.0, 70.0)
+vfx_scale = 2.4
+vfx_fps = 14.0
+radius = 48.0
+damage = 25.0
+damage_type = 1
+
+[resource]
+script = ExtResource("1_spell")
+id = &"sk_blazing_meteor"
+display_name = "Blazing Meteor"
+description = "Đánh dấu vùng ngắm, 0.6s sau thiên thạch chính giáng xuống (55 sát thương) kèm 3 mảnh vụn nổ lần lượt xung quanh (25 sát thương) và để lại mặt đất cháy 3s."
+color = Color(0.95, 0.3, 0.25, 1)
+cooldown = 9.0
+damage = 55.0
+kind = 4
+cast_time = 0.35
+recovery_time = 0.3
+damage_type = 1
+steps = Array[ExtResource("2_step")]([SubResource("step_1"), SubResource("step_2"), SubResource("step_3"), SubResource("step_4"), SubResource("step_5"), SubResource("step_6"), SubResource("step_7")])
+charge_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/c07"
+charge_vfx_scale = 2.4
+charge_offset = 10.0
+icon_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/c09"
+icon_frame = 0

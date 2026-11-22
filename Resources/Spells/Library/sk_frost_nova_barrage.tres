@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+[ext_resource type="Script" path="res://Resources/SkillStep.gd" id="2_step"]
+
+[sub_resource type="Resource" id="step_1"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/c01"
+anchor = 0
+vfx_scale = 4.0
+vfx_fps = 14.0
+radius = 92.0
+damage = 30.0
+damage_type = 2
+knockback_force = 300.0
+
+[sub_resource type="Resource" id="step_2"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/c11"
+vfx_scale = 1.8
+vfx_fps = 14.0
+radius = 44.0
+damage = 20.0
+damage_type = 2
+
+[sub_resource type="Resource" id="step_3"]
+script = ExtResource("2_step")
+type = 2
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/d10"
+delay = 0.3
+anchor = 0
+offset = 30.0
+vfx_scale = 1.6
+vfx_fps = 14.0
+rotate_to_dir = true
+count = 8
+spread_deg = 315.0
+speed = 360.0
+max_range = 210.0
+contact_radius = 10.0
+on_end = Array[ExtResource("2_step")]([SubResource("step_2")])
+
+[resource]
+script = ExtResource("1_spell")
+id = &"sk_frost_nova_barrage"
+display_name = "Frost Nova Barrage"
+description = "Nổ băng quanh người (30 sát thương, đẩy lùi), sau đó 8 mũi băng bắn ra mọi hướng, nổ khi chạm hoặc hết tầm (20 sát thương)."
+color = Color(0.35, 0.6, 1.0, 1)
+cooldown = 8.0
+damage = 30.0
+kind = 4
+cast_time = 0.3
+recovery_time = 0.3
+damage_type = 2
+steps = Array[ExtResource("2_step")]([SubResource("step_1"), SubResource("step_3")])
+charge_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/c11"
+charge_vfx_scale = 2.4
+charge_offset = 0.0
+icon_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/c01"
+icon_frame = 0

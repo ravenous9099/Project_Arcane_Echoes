@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cdmr0xwvqdisn"]
+
+[ext_resource type="Script" uid="uid://chlqn0yoil0v6" path="res://Scenes/Player/player.gd" id="1_e1a78"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3jwxg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_adjxu"]
+animations = []
+
+[node name="Player" type="CharacterBody2D" unique_id=7103037]
+script = ExtResource("1_e1a78")
+speed = 180.0
+max_health = 200.0
+dash_speed = 590.0
+dash_cooldown = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1837587756]
+shape = SubResource("CircleShape2D_3jwxg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1294846733]
+
+[node name="Visual" type="Sprite2D" parent="." unique_id=1555407705]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1255005989]
+sprite_frames = SubResource("SpriteFrames_adjxu")
+animation = &""

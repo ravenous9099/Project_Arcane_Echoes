@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+[ext_resource type="Script" path="res://Resources/SkillStep.gd" id="2_step"]
+
+[sub_resource type="Resource" id="step_1"]
+script = ExtResource("2_step")
+type = 0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/d08"
+anchor = 2
+max_range = 300.0
+vfx_scale = 3.6
+vfx_fps = 8.0
+vfx_loop = true
+duration = 3.0
+
+[sub_resource type="Resource" id="step_2"]
+script = ExtResource("2_step")
+type = 3
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/d09"
+anchor = 2
+max_range = 300.0
+vfx_scale = 3.2
+vfx_fps = 8.0
+duration = 3.0
+radius = 62.0
+damage = 10.0
+damage_type = 4
+tick_interval = 0.5
+
+[sub_resource type="Resource" id="step_3"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/c05"
+delay = 3.0
+anchor = 2
+max_range = 300.0
+vfx_scale = 3.4
+vfx_fps = 14.0
+radius = 66.0
+damage = 30.0
+damage_type = 4
+knockback_force = 180.0
+
+[resource]
+script = ExtResource("1_spell")
+id = &"sk_shadow_seal"
+display_name = "Shadow Seal"
+description = "Khắc ấn bóng tối tại con trỏ: 3s gây 10 sát thương mỗi 0.5s cho kẻ đứng trong ấn, rồi ấn vỡ tung (30 sát thương)."
+color = Color(0.72, 0.42, 0.95, 1)
+cooldown = 9.0
+damage = 30.0
+kind = 4
+cast_time = 0.3
+recovery_time = 0.3
+damage_type = 4
+steps = Array[ExtResource("2_step")]([SubResource("step_1"), SubResource("step_2"), SubResource("step_3")])
+charge_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/e14"
+charge_vfx_scale = 2.2
+charge_offset = 12.0
+icon_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/d09"
+icon_frame = 0

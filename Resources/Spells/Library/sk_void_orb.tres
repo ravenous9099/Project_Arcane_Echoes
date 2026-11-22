@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+[ext_resource type="Script" path="res://Resources/SkillStep.gd" id="2_step"]
+
+[sub_resource type="Resource" id="step_1"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/e12"
+vfx_scale = 3.4
+vfx_fps = 14.0
+radius = 64.0
+damage = 40.0
+damage_type = 4
+knockback_force = 240.0
+
+[sub_resource type="Resource" id="step_2"]
+script = ExtResource("2_step")
+type = 2
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/e08"
+anchor = 1
+offset = 22.0
+vfx_scale = 2.0
+vfx_fps = 12.0
+speed = 130.0
+max_range = 224.0
+contact_radius = 16.0
+pierce = 99
+damage = 15.0
+damage_type = 4
+spin_deg_per_sec = -200.0
+on_end = Array[ExtResource("2_step")]([SubResource("step_1")])
+
+[resource]
+script = ExtResource("1_spell")
+id = &"sk_void_orb"
+display_name = "Void Orb"
+description = "Quả cầu hư không bay chậm xuyên qua kẻ địch (15 sát thương mỗi mục tiêu), nổ ở cuối đường (40 sát thương, đẩy lùi)."
+color = Color(0.72, 0.42, 0.95, 1)
+cooldown = 8.0
+damage = 40.0
+kind = 4
+cast_time = 0.4
+recovery_time = 0.3
+damage_type = 4
+steps = Array[ExtResource("2_step")]([SubResource("step_2")])
+charge_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/d08"
+charge_vfx_scale = 2.0
+charge_offset = 18.0
+icon_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/e08"
+icon_frame = 0

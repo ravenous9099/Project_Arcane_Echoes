@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RelicData" format=3]
+
+[ext_resource type="Script" path="res://Resources/RelicData.gd" id="1_rel"]
+[ext_resource type="Texture2D" path="res://Resources/Icons/Relics/clover_charm.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_rel")
+id = &"clover_charm"
+display_name = "Bùa Cỏ Bốn Lá"
+description = "Tăng 25 điểm phần trăm tỉ lệ rơi viên máu (12% thành 37%)."
+icon = ExtResource("2_icon")
+price = 250
+tier = 1
+hp_drop_bonus = 0.25

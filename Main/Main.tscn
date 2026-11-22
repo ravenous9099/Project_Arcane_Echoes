@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cjw3ntf2tg1ty"]
+
+[ext_resource type="PackedScene" uid="uid://cjfbcfp4j1fly" path="res://Scenes/World/procedural_level.tscn" id="1_amygn"]
+[ext_resource type="Script" uid="uid://doe2fblp61gdw" path="res://Scripts/Systems/Main.gd" id="2_ps1la"]
+[ext_resource type="PackedScene" uid="uid://cdmr0xwvqdisn" path="res://Scenes/Player/Player.tscn" id="3_6aewd"]
+[ext_resource type="PackedScene" uid="uid://d3y8b36db2k6v" path="res://Scenes/Enemies/Paladin.tscn" id="3_ps1la"]
+[ext_resource type="Script" uid="uid://bu12afr5fmaa8" path="res://Resources/SpellData.gd" id="4_bor5n"]
+[ext_resource type="Resource" path="res://Resources/Spells/fireball.tres" id="5_wltqy"]
+[ext_resource type="Resource" path="res://Resources/Spells/frost_shard.tres" id="6_kf8jr"]
+[ext_resource type="Resource" path="res://Resources/Spells/shadow_burst.tres" id="7_kmnsd"]
+[ext_resource type="Script" uid="uid://bd2udy7klcg73" path="res://Scripts/Systems/EnemySpawner.gd" id="10_wltqy"]
+[ext_resource type="PackedScene" uid="uid://cs1afpa20ygi5" path="res://Scenes/Enemies/Archer.tscn" id="11_qd626"]
+[ext_resource type="PackedScene" uid="uid://bnnars5bihjda" path="res://Scenes/Enemies/Knight.tscn" id="12_6ivxk"]
+[ext_resource type="PackedScene" uid="uid://6yri4qs35kw2" path="res://Scenes/Enemies/Mage.tscn" id="13_6yo1i"]
+[ext_resource type="PackedScene" uid="uid://ysnv37dj7s3p" path="res://Scenes/Enemies/Wizard.tscn" id="14_lrfe7"]
+
+[node name="Main" type="Node2D" unique_id=155278434]
+script = ExtResource("2_ps1la")
+player_scene = ExtResource("3_6aewd")
+player_visual_scale = Vector2(0.8, 0.8)
+debug_enemy_scene = ExtResource("3_ps1la")
+spell_pool = Array[ExtResource("4_bor5n")]([ExtResource("5_wltqy"), ExtResource("6_kf8jr"), ExtResource("7_kmnsd")])
+
+[node name="World" parent="." unique_id=151713338 instance=ExtResource("1_amygn")]
+use_random_seed = true
+min_room_size = 10
+forest_density = 0.525
+room_obstacle_density = 0.168
+grass_decor_density = 0.109
+generate_on_ready = false
+
+[node name="EnemySpawner" type="Node" parent="." unique_id=1888041366]
+script = ExtResource("10_wltqy")
+enemy_scenes = Array[PackedScene]([ExtResource("11_qd626"), ExtResource("12_6ivxk"), ExtResource("13_6yo1i"), ExtResource("3_ps1la"), ExtResource("14_lrfe7")])
+enemies_per_spell = 3.0

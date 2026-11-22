@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bnnars5bihjda"]
+
+[ext_resource type="Script" uid="uid://dm34hebw07nbs" path="res://Scripts/Systems/Enemy.gd" id="1_vxtv3"]
+[ext_resource type="Resource" path="res://Resources/EnemyAttacks/melee_slash.tres" id="9_atk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6aq7h"]
+
+[node name="Knight" type="CharacterBody2D" unique_id=1498125454]
+script = ExtResource("1_vxtv3")
+character_folder = "res://Assets/Characters/2D HD Character pack/Spritesheets/With shadow/1Knight"
+sprite_scale = Vector2(1, 1)
+enemy_name = "Hiệp sĩ"
+max_health = 50.0
+move_speed = 70.0
+attack_spell = ExtResource("9_atk")
+attack_cooldown = 1.2
+telegraph_time = 0.45
+aim_lock_time = 0.2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=167426220]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=284534069]
+shape = SubResource("CircleShape2D_6aq7h")

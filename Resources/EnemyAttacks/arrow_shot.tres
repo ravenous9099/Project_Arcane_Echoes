@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+
+[resource]
+script = ExtResource("1_spell")
+id = &"enemy_arrow_shot"
+display_name = "Bắn tên"
+description = "Mũi tên bay thẳng, đủ chậm để né."
+color = Color(0.9, 0.8, 0.4, 1)
+cooldown = 0.0
+damage = 9.0
+kind = 0
+cast_time = 0.0
+recovery_time = 0.0
+damage_type = 0
+knockback_force = 120.0
+projectile_speed = 340.0
+projectile_lifetime = 1.6
+projectile_radius = 6.0
+vfx_folder = "res://Assets/Spell/Projectiles - 2D HD Character pack 1/Arrows/Arrow"
+vfx_scale = 0.4

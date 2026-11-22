@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+[ext_resource type="Texture2D" path="res://Resources/Icons/fireball.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_spell")
+icon = ExtResource("2_icon")
+id = &"fireball"
+display_name = "Fireball"
+description = "Quả cầu lửa gây sát thương đơn mục tiêu."
+color = Color(1, 0.45, 0.1, 1)
+cooldown = 0.6
+damage = 20.0
+kind = 0
+cast_time = 0.08
+recovery_time = 0.12
+damage_type = 1
+knockback_force = 300.0
+projectile_speed = 480.0
+projectile_lifetime = 1.0
+projectile_radius = 8.0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/d10"
+impact_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/e12"
+vfx_scale = 1.7

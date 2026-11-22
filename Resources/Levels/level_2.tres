@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="LevelConfig" format=3]
+
+[ext_resource type="Script" path="res://Resources/LevelConfig.gd" id="1_cfg"]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/Archer.tscn" id="2_archer"]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/Knight.tscn" id="3_knight"]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/Mage.tscn" id="4_mage"]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/Paladin.tscn" id="5_paladin"]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/Wizard.tscn" id="6_wizard"]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/DeathKnightBoss.tscn" id="7_boss"]
+[ext_resource type="Resource" path="res://Resources/Spells/shockwave_shield.tres" id="8_reward"]
+
+[resource]
+script = ExtResource("1_cfg")
+id = &"level_2"
+display_name = "LEVEL 2"
+theme_id = &"autumn"
+enemy_scenes = Array[PackedScene]([ExtResource("2_archer"), ExtResource("3_knight"), ExtResource("4_mage"), ExtResource("5_paladin"), ExtResource("6_wizard")])
+goal_points = 400
+boss_bonus_points = 0
+max_spells_on_map = -1
+base_enemy_count = 5
+initial_spawn_count = 4
+enemies_per_spell = 2.5
+threshold_spell_counts = Array[int]([2, 4])
+threshold_bonus_enemies = Array[int]([2, 4])
+max_enemies = 30
+spawn_interval = 1.8
+boss_scene = ExtResource("7_boss")
+reward_spell = ExtResource("8_reward")

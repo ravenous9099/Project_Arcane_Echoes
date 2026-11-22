@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+
+[resource]
+script = ExtResource("1_spell")
+id = &"enemy_magic_orb"
+display_name = "Cầu phép"
+description = "Quả cầu phép chậm, bay thẳng, của Wizard."
+color = Color(0.55, 0.35, 1, 1)
+cooldown = 0.0
+damage = 12.0
+kind = 0
+cast_time = 0.0
+recovery_time = 0.0
+damage_type = 3
+knockback_force = 160.0
+projectile_speed = 250.0
+projectile_lifetime = 2.0
+projectile_radius = 9.0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/e08"
+impact_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/c09"
+vfx_scale = 1.0

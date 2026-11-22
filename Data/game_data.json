@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "relics": [
+    {
+      "id": "clover_charm",
+      "name": "Bùa Cỏ Bốn Lá",
+      "description": "Tăng 25 điểm phần trăm tỉ lệ rơi viên máu (12% thành 37%).",
+      "price": 250,
+      "tier": 1,
+      "hp_drop_bonus": 0.25
+    },
+    {
+      "id": "ember_ring",
+      "name": "Nhẫn Than Hồng",
+      "description": "Tăng 30% sát thương gây ra.",
+      "price": 300,
+      "tier": 2,
+      "damage_pct": 0.3
+    },
+    {
+      "id": "hourglass",
+      "name": "Đồng Hồ Cát",
+      "description": "Giảm 30% thời gian hồi chiêu của mọi spell.",
+      "price": 300,
+      "tier": 3,
+      "cooldown_pct": 0.3
+    },
+    {
+      "id": "lucky_coin",
+      "name": "Đồng Xu May Mắn",
+      "description": "Vàng rơi ra nhiều hơn 35%.",
+      "price": 350,
+      "tier": 2,
+      "gold_pct": 0.35
+    },
+    {
+      "id": "silver_heart",
+      "name": "Trái Tim Bạc",
+      "description": "Tăng 30% máu tối đa.",
+      "price": 300,
+      "tier": 1,
+      "max_hp_pct": 0.3
+    },
+    {
+      "id": "vampire_fang",
+      "name": "Răng Ma Cà Rồng",
+      "description": "Hồi 5 máu mỗi khi hạ một kẻ địch.",
+      "price": 250,
+      "tier": 3,
+      "kill_heal": 5.0
+    },
+    {
+      "id": "wind_boots",
+      "name": "Giày Gió",
+      "description": "Tăng 10% tốc độ di chuyển.",
+      "price": 100,
+      "tier": 1,
+      "move_speed_pct": 0.1
+    }
+  ],
+  "spells": [
+    {
+      "id": "fire_fist",
+      "name": "Quyền Lửa",
+      "cooldown": 4.0,
+      "damage": 38.0
+    },
+    {
+      "id": "fire_fist_jab",
+      "name": "Đấm liên hoàn",
+      "cooldown": 0.0,
+      "damage": 16.0
+    },
+    {
+      "id": "fire_fist_punch",
+      "name": "Cú đấm lửa",
+      "cooldown": 0.0,
+      "damage": 38.0
+    },
+    {
+      "id": "fire_fist_shockwave",
+      "name": "Chấn động",
+      "cooldown": 0.0,
+      "damage": 45.0
+    },
+    {
+      "id": "fireball",
+      "name": "Fireball",
+      "cooldown": 0.6,
+      "damage": 20.0
+    },
+    {
+      "id": "frost_shard",
+      "name": "Frost Shard",
+      "cooldown": 0.45,
+      "damage": 11.0
+    },
+    {
+      "id": "shadow_burst",
+      "name": "Shadow Burst",
+      "cooldown": 1.9,
+      "damage": 46.0
+    },
+    {
+      "id": "shockwave_shield",
+      "name": "Shockwave Shield",
+      "cooldown": 20.0,
+      "damage": 20.0
+    }
+  ],
+  "levels": [
+    {
+      "id": "level_1",
+      "name": "LEVEL 1",
+      "theme": "default",
+      "goal_points": 400,
+      "max_enemies": 30
+    },
+    {
+      "id": "level_2",
+      "name": "LEVEL 2",
+      "theme": "autumn",
+      "goal_points": 400,
+      "max_enemies": 30
+    },
+    {
+      "id": "level_3",
+      "name": "LEVEL 3",
+      "theme": "winter",
+      "goal_points": 400,
+      "max_enemies": 30
+    },
+    {
+      "id": "level_4",
+      "name": "LEVEL 4 - HẦM NGỤC CUỐI",
+      "theme": "dungeon",
+      "goal_points": 600,
+      "max_enemies": 20
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+
+[resource]
+script = ExtResource("1_spell")
+id = &"enemy_heavy_slam"
+display_name = "Đập mạnh"
+description = "Đòn đập nặng, chậm, tầm gần của Paladin."
+color = Color(1, 0.55, 0.2, 1)
+cooldown = 0.0
+damage = 26.0
+kind = 1
+cast_time = 0.0
+recovery_time = 0.0
+cast_range = 40.0
+damage_type = 0
+knockback_force = 380.0
+area_radius = 38.0
+area_delay = 0.0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/c09"
+vfx_scale = 2.6

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RelicData" format=3]
+
+[ext_resource type="Script" path="res://Resources/RelicData.gd" id="1_rel"]
+[ext_resource type="Texture2D" path="res://Resources/Icons/Relics/ember_ring.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_rel")
+id = &"ember_ring"
+display_name = "Nhẫn Than Hồng"
+description = "Tăng 30% sát thương gây ra."
+icon = ExtResource("2_icon")
+price = 300
+tier = 2
+damage_pct = 0.3

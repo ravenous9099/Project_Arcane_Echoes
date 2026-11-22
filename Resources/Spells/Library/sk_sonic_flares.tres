@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+[ext_resource type="Script" path="res://Resources/SkillStep.gd" id="2_step"]
+
+[sub_resource type="Resource" id="step_1"]
+script = ExtResource("2_step")
+type = 0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/e01"
+anchor = 1
+offset = 46.0
+vfx_scale = 2.2
+vfx_fps = 14.0
+duration = 0.3
+
+[sub_resource type="Resource" id="step_2"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/e12"
+delay = 0.3
+anchor = 1
+offset = 62.0
+vfx_scale = 3.0
+vfx_fps = 14.0
+radius = 58.0
+damage = 40.0
+damage_type = 1
+
+[sub_resource type="Resource" id="step_3"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/e00"
+vfx_scale = 2.4
+vfx_fps = 16.0
+radius = 46.0
+damage = 45.0
+damage_type = 1
+knockback_force = 340.0
+
+[sub_resource type="Resource" id="step_4"]
+script = ExtResource("2_step")
+type = 2
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/d15"
+delay = 0.32
+anchor = 1
+offset = 62.0
+vfx_scale = 1.8
+vfx_fps = 16.0
+rotate_to_dir = true
+count = 5
+spread_deg = 60.0
+speed = 520.0
+max_range = 256.0
+contact_radius = 10.0
+on_end = Array[ExtResource("2_step")]([SubResource("step_3")])
+
+[resource]
+script = ExtResource("1_spell")
+id = &"sk_sonic_flares"
+display_name = "Sonic Flares"
+description = "Đấm mạnh về phía con trỏ: tụ năng lượng 0.2s, hình thành quả cầu rồi nổ (40 sát thương trước mặt), sau đó bắn 5 luồng lửa bay nhanh 8 ô, nổ khi chạm hoặc hết tầm (45 sát thương, đẩy lùi 2 ô)."
+color = Color(0.95, 0.3, 0.25, 1)
+cooldown = 7.0
+damage = 45.0
+kind = 4
+cast_time = 0.2
+recovery_time = 0.3
+damage_type = 1
+ignores_knockback_resistance = true
+steps = Array[ExtResource("2_step")]([SubResource("step_1"), SubResource("step_2"), SubResource("step_4")])
+charge_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/e02"
+charge_vfx_scale = 2.2
+charge_offset = 26.0
+icon_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/d15"
+icon_frame = 1

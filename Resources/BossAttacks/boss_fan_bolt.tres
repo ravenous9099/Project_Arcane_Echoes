@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+
+[resource]
+script = ExtResource("1_spell")
+id = &"boss_fan_bolt"
+display_name = "Chùm đạn quạt"
+description = "Một viên trong chùm đạn tỏa quạt."
+color = Color(0.8, 0.3, 1, 1)
+cooldown = 0.0
+damage = 12.0
+kind = 0
+cast_time = 0.0
+recovery_time = 0.0
+damage_type = 4
+knockback_force = 150.0
+projectile_speed = 320.0
+projectile_lifetime = 2.2
+projectile_radius = 9.0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/d10"
+impact_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/e12"
+vfx_scale = 1.5

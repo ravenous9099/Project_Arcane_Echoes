@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+
+[resource]
+script = ExtResource("1_spell")
+id = &"boss_slam"
+display_name = "Đập đất"
+description = "Vụ nổ quanh người Boss."
+color = Color(0.75, 0.2, 0.9, 1)
+cooldown = 0.0
+damage = 26.0
+kind = 1
+cast_time = 0.0
+recovery_time = 0.0
+damage_type = 4
+knockback_force = 480.0
+area_radius = 125.0
+area_delay = 0.0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/e12"
+vfx_scale = 8.0

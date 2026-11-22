@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+[ext_resource type="Texture2D" path="res://Resources/Icons/fire_fist.png" id="2_icon"]
+[ext_resource type="Resource" path="res://Resources/Spells/fire_fist_punch.tres" id="2_punch"]
+[ext_resource type="Resource" path="res://Resources/Spells/fire_fist_jab.tres" id="3_jab"]
+[ext_resource type="Resource" path="res://Resources/Spells/fire_fist_shockwave.tres" id="4_shock"]
+
+[resource]
+script = ExtResource("1_spell")
+icon = ExtResource("2_icon")
+id = &"fire_fist"
+display_name = "Quyền Lửa"
+description = "R: lao tới và tung một cú đấm lửa. Khi đủ 100 mana: Ultimate - lao xa, đấm liên hoàn, chấn động đẩy lùi mọi kẻ địch (cả Boss)."
+color = Color(1, 0.12, 0.1, 1)
+cooldown = 4.0
+damage = 38.0
+kind = 2
+fixed_slot = 3
+mana_cost = 100.0
+rush_distance = 80.0
+rush_duration = 0.14
+rush_punch = ExtResource("2_punch")
+punch_offset = 40.0
+ult_distance = 256.0
+ult_duration = 0.6
+ult_jab = ExtResource("3_jab")
+ult_jab_count = 6
+ult_shockwave = ExtResource("4_shock")
+ult_cooldown = 2.0

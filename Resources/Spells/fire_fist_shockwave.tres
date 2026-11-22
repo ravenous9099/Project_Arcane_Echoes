@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+
+[resource]
+script = ExtResource("1_spell")
+id = &"fire_fist_shockwave"
+display_name = "Chấn động"
+description = "Vùng nổ tức thì của Quyền Lửa."
+color = Color(1, 0.18, 0.1, 1)
+cooldown = 0.0
+damage = 45.0
+kind = 1
+cast_time = 0.0
+recovery_time = 0.0
+damage_type = 1
+knockback_force = 1100.0
+ignores_knockback_resistance = true
+area_radius = 200.0
+area_delay = 0.0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/e12"
+vfx_scale = 11.0
+vfx_fps = 30.0

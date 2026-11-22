@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+
+[resource]
+script = ExtResource("1_spell")
+id = &"enemy_melee_slash"
+display_name = "Chém"
+description = "Đòn chém tầm gần của Knight."
+color = Color(1, 0.3, 0.25, 1)
+cooldown = 0.0
+damage = 12.0
+kind = 1
+cast_time = 0.0
+recovery_time = 0.0
+cast_range = 34.0
+damage_type = 0
+knockback_force = 220.0
+area_radius = 30.0
+area_delay = 0.0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/c07"
+vfx_scale = 2.0

@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+[ext_resource type="Script" path="res://Resources/SkillStep.gd" id="2_step"]
+
+[sub_resource type="Resource" id="step_1"]
+script = ExtResource("2_step")
+type = 0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/c03"
+anchor = 1
+offset = 26.0
+vfx_scale = 2.6
+vfx_fps = 16.0
+rotate_to_dir = true
+
+[sub_resource type="Resource" id="step_2"]
+script = ExtResource("2_step")
+type = 3
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/d12"
+vfx_scale = 1.6
+vfx_fps = 10.0
+duration = 4.0
+radius = 20.0
+damage = 14.0
+damage_type = 1
+tick_interval = 1.0
+
+[sub_resource type="Resource" id="step_3"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/c05"
+vfx_scale = 3.0
+vfx_fps = 14.0
+radius = 60.0
+damage = 45.0
+damage_type = 1
+
+[sub_resource type="Resource" id="step_4"]
+script = ExtResource("2_step")
+type = 2
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/e03"
+anchor = 1
+offset = 22.0
+vfx_scale = 2.0
+vfx_fps = 8.0
+speed = 200.0
+max_range = 256.0
+stop_at_aim = true
+contact_radius = 12.0
+spin_deg_per_sec = 300.0
+trail_spacing = 20.0
+trail = SubResource("step_2")
+on_end = Array[ExtResource("2_step")]([SubResource("step_3")])
+
+[resource]
+script = ExtResource("1_spell")
+id = &"sk_magma_stone"
+display_name = "Magma Stone"
+description = "Tích tụ 0.5s, bắn viên đá nham thạch lăn về phía con trỏ (tối đa 8 ô), để lại vệt lửa 4s (14 sát thương/giây). Phát nổ ở cuối đường hoặc khi chạm kẻ địch (45 sát thương)."
+color = Color(0.95, 0.3, 0.25, 1)
+cooldown = 6.0
+damage = 45.0
+kind = 4
+cast_time = 0.5
+recovery_time = 0.2
+damage_type = 1
+steps = Array[ExtResource("2_step")]([SubResource("step_1"), SubResource("step_4")])
+charge_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/d04"
+charge_vfx_scale = 2.6
+charge_offset = 18.0
+icon_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Red/e03"
+icon_frame = 0

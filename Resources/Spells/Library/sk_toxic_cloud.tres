@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+[ext_resource type="Script" path="res://Resources/SkillStep.gd" id="2_step"]
+
+[sub_resource type="Resource" id="step_1"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/c09"
+vfx_scale = 2.8
+vfx_fps = 14.0
+radius = 60.0
+damage = 25.0
+damage_type = 0
+
+[sub_resource type="Resource" id="step_2"]
+script = ExtResource("2_step")
+type = 3
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/e05"
+delay = 0.1
+vfx_scale = 3.0
+vfx_fps = 8.0
+duration = 4.0
+radius = 58.0
+damage = 6.0
+damage_type = 0
+tick_interval = 0.5
+
+[sub_resource type="Resource" id="step_3"]
+script = ExtResource("2_step")
+type = 2
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/c08"
+anchor = 1
+offset = 18.0
+vfx_scale = 1.8
+vfx_fps = 10.0
+speed = 280.0
+max_range = 288.0
+stop_at_aim = true
+contact_radius = 12.0
+spin_deg_per_sec = 360.0
+on_end = Array[ExtResource("2_step")]([SubResource("step_1"), SubResource("step_2")])
+
+[resource]
+script = ExtResource("1_spell")
+id = &"sk_toxic_cloud"
+display_name = "Toxic Cloud"
+description = "Ném bình độc về phía con trỏ, nổ (25 sát thương) và để lại đám mây độc 4s (6 sát thương mỗi 0.5s)."
+color = Color(0.4, 0.85, 0.45, 1)
+cooldown = 8.0
+damage = 25.0
+kind = 4
+cast_time = 0.3
+recovery_time = 0.25
+damage_type = 0
+steps = Array[ExtResource("2_step")]([SubResource("step_3")])
+charge_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/c08"
+charge_vfx_scale = 1.8
+charge_offset = 14.0
+icon_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/e05"
+icon_frame = 1

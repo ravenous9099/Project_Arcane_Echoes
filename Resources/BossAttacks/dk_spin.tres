@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+
+[resource]
+script = ExtResource("1_spell")
+id = &"dk_spin"
+display_name = "Xoay kiếm"
+description = "Vòng quét quanh người Hiệp sĩ tử thần."
+color = Color(0.85, 0.15, 0.2, 1)
+cooldown = 0.0
+damage = 22.0
+kind = 1
+cast_time = 0.0
+recovery_time = 0.0
+damage_type = 0
+knockback_force = 460.0
+area_radius = 135.0
+area_delay = 0.0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Purple/c04"
+vfx_scale = 8.5
+vfx_fps = 28.0

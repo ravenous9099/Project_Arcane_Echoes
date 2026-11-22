@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+
+[resource]
+script = ExtResource("1_spell")
+id = &"lb_snipe_arrow"
+display_name = "Tên xuyên băng"
+description = "Mũi tên nhanh, choáng khi trúng."
+color = Color(0.45, 0.1, 0.9, 1)
+cooldown = 0.0
+damage = 20.0
+kind = 0
+cast_time = 0.0
+recovery_time = 0.0
+damage_type = 2
+knockback_force = 300.0
+projectile_speed = 780.0
+projectile_lifetime = 1.5
+projectile_radius = 8.0
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/d15"
+impact_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Blue/c11"
+vfx_scale = 1.8
+stun_duration = 0.8

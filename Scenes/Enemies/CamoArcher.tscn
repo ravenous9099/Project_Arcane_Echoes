@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://7htt4uaa4c5j"]
+
+[ext_resource type="Script" uid="uid://cltoqxkunhwjg" path="res://Scripts/Systems/CamoArcher.gd" id="1_camo"]
+[ext_resource type="Resource" path="res://Resources/EnemyAttacks/ice_arrow.tres" id="2_atk"]
+
+[node name="CamoArcher" type="CharacterBody2D" unique_id=1357758566]
+script = ExtResource("1_camo")
+character_folder = "res://Assets/Characters/2D HD Character pack/Spritesheets/With shadow/5CamoArcher"
+attack_animation = "QuickShot"
+sprite_scale = Vector2(1, 1)
+enemy_name = "Xạ thủ tuyết"
+score_value = 20
+max_health = 34.0
+move_speed = 75.0
+archetype = 1
+attack_spell = ExtResource("2_atk")
+attack_range = 320.0
+keep_distance_min = 190.0
+attack_cooldown = 2.0
+telegraph_time = 0.65
+attack_active_time = 0.1
+recovery_time = 0.4

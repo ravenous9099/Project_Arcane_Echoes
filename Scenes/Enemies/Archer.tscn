@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cs1afpa20ygi5"]
+
+[ext_resource type="Script" uid="uid://dm34hebw07nbs" path="res://Scripts/Systems/Enemy.gd" id="1_mn367"]
+[ext_resource type="Texture2D" uid="uid://dbvefj14q45ae" path="res://Assets/Characters/2D HD Character pack/1Knight/Idle/E/Idle_0_001.png" id="2_xe7no"]
+[ext_resource type="Resource" path="res://Resources/EnemyAttacks/arrow_shot.tres" id="9_atk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g07wo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_adjxu"]
+
+[node name="Archer" type="CharacterBody2D" unique_id=12780512]
+script = ExtResource("1_mn367")
+character_folder = "res://Assets/Characters/2D HD Character pack/Spritesheets/With shadow/2Archer"
+attack_animation = "QuickShot"
+sprite_scale = Vector2(1, 1)
+enemy_name = "Xạ thủ"
+score_value = 15
+move_speed = 70.0
+archetype = 1
+attack_spell = ExtResource("9_atk")
+attack_range = 300.0
+keep_distance_min = 170.0
+attack_cooldown = 1.8
+telegraph_time = 0.6
+attack_active_time = 0.1
+recovery_time = 0.4
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=736600209]
+texture = ExtResource("2_xe7no")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=644363499]
+shape = SubResource("CircleShape2D_g07wo")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=298688314]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1755467528]
+shape = SubResource("CircleShape2D_adjxu")
+debug_color = Color(0.920973, 0.2518997, 0.32648042, 0.41960785)

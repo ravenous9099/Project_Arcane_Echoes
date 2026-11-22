@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="SpellData" format=3]
+
+[ext_resource type="Script" path="res://Resources/SpellData.gd" id="1_spell"]
+[ext_resource type="Script" path="res://Resources/SkillStep.gd" id="2_step"]
+
+[sub_resource type="Resource" id="step_1"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/b02"
+anchor = 1
+offset = 42.0
+vfx_scale = 3.2
+vfx_fps = 14.0
+rotate_to_dir = true
+vfx_rotation_offset_deg = 180.0
+radius = 58.0
+damage = 28.0
+damage_type = 0
+knockback_force = 160.0
+
+[sub_resource type="Resource" id="step_2"]
+script = ExtResource("2_step")
+type = 1
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/b05"
+delay = 0.16
+anchor = 1
+offset = 46.0
+vfx_scale = 3.2
+vfx_fps = 14.0
+rotate_to_dir = true
+radius = 58.0
+damage = 28.0
+damage_type = 0
+knockback_force = 160.0
+
+[sub_resource type="Resource" id="step_3"]
+script = ExtResource("2_step")
+type = 3
+vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/d02"
+delay = 0.3
+anchor = 1
+offset = 70.0
+vfx_scale = 2.6
+vfx_fps = 14.0
+duration = 2.0
+radius = 54.0
+damage = 7.0
+damage_type = 0
+tick_interval = 0.4
+
+[resource]
+script = ExtResource("1_spell")
+id = &"sk_vortex_slash"
+display_name = "Vortex Slash"
+description = "Hai nhát chém cung liên tiếp (28 sát thương mỗi nhát) rồi xoáy lốc 2s trước mặt (7 sát thương mỗi 0.4s)."
+color = Color(0.4, 0.85, 0.45, 1)
+cooldown = 7.0
+damage = 28.0
+kind = 4
+cast_time = 0.2
+recovery_time = 0.3
+damage_type = 0
+steps = Array[ExtResource("2_step")]([SubResource("step_1"), SubResource("step_2"), SubResource("step_3")])
+charge_vfx_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/e04"
+charge_vfx_scale = 2.0
+charge_offset = 20.0
+icon_folder = "res://Assets/Spell/Effect Bullet Impact Explosion 32x32/Sliced/Green/d02"
+icon_frame = 0

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d3y8b36db2k6v"]
+
+[ext_resource type="Script" uid="uid://dm34hebw07nbs" path="res://Scripts/Systems/Enemy.gd" id="1_3ksao"]
+[ext_resource type="Resource" path="res://Resources/EnemyAttacks/heavy_slam.tres" id="9_atk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_58vjo"]
+
+[node name="Paladin" type="CharacterBody2D" unique_id=1240339509]
+script = ExtResource("1_3ksao")
+character_folder = "res://Assets/Characters/2D HD Character pack/Spritesheets/With shadow/4Paladin"
+archetype = 0
+max_health = 130.0
+move_speed = 45.0
+body_radius = 14.0
+attack_range = 56.0
+attack_cooldown = 2.0
+telegraph_time = 0.8
+aim_lock_time = 0.3
+attack_active_time = 0.2
+recovery_time = 0.9
+knockback_resistance = 0.6
+stun_min_damage = 30.0
+attack_animation = "Melee"
+attack_spell = ExtResource("9_atk")
+enemy_name = "Thánh kỵ sĩ"
+score_value = 30
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2075178610]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=231703027]
+shape = SubResource("CircleShape2D_58vjo")
